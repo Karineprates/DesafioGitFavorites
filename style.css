@@ -27,11 +27,17 @@ header {
 }
 
 
-#app{
-padding: 2rem;
-max-width: 1120px;
-margin: 0 auto;
-}
+  #app{
+  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  }
+
+  main {
+    background: #030B0D;
+    border: 1px solid #4A808C;
+    border-radius: 1.2rem;
+  }
 .sr-only{
   position: absolute;
   width: 1px;

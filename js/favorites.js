@@ -114,9 +114,15 @@ this.entries.forEach (user => {
   this.tbody.append(row)
 
 });
+
+  this.checkEmpty()
     
   }
 
+  checkEmpty() {
+    const emptyState = this.root.querySelector(".emptyState")
+    this.entries.length <= 0 ? emptyState.classList.remove("hide") : emptyState.classList.add("hide")
+}
   
 
   createRow () {
@@ -126,18 +132,14 @@ this.entries.forEach (user => {
     tr.innerHTML = ` 
     
     <td class="user">
-      <img src="https://github.com/maykbrito.png" alt="imagem de mayk brito">
-      <a href="https://github.com/maykbrito" target="_blank" >
-        <p>Mayk Brito</p>
-        <span>maykbrito</span>
+      <img src="" alt="">
+      <a href="" target="_blank" >
+        <p></p>
+        <span></span>
       </a>
     </td>
-    <td class="repositories">
-      76
-    </td>
-    <td class="followers" >
-      9589
-    </td>
+    <td class="repositories"></td>
+    <td class="followers" ></td>
     <td>
     <button class="remove" >Remover</button>
   </td>
@@ -150,8 +152,8 @@ this.entries.forEach (user => {
   removeAllTr() {
 
     this.tbody.querySelectorAll('tr')
-    .forEach((tr) => {
-      tr.remove()
+    .forEach((element) => {
+      element.remove()
     })
   }
 
